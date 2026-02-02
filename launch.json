@@ -1,0 +1,108 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "🛡️  Protect — Inject DNA (Sphere)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "protect",
+                "--input", "${workspaceFolder}/test_sphere.obj",
+                "--output", "${workspaceFolder}/test_sphere_watermarked.obj",
+                "--keyfile", "${workspaceFolder}/test_sphere.dna.npz",
+                "--secret-key", "MyBrand2024",
+                "--password", "s3cret",
+                "--coefficients", "10",
+                "--safety-divisor", "200"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "🛡️  Protect — Inject DNA (Torus)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "protect",
+                "--input", "${workspaceFolder}/test_torus.obj",
+                "--output", "${workspaceFolder}/test_torus_watermarked.obj",
+                "--keyfile", "${workspaceFolder}/test_torus.dna.npz",
+                "--secret-key", "TorusOwner",
+                "--password", "p@ssw0rd",
+                "--coefficients", "12",
+                "--safety-divisor", "200"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "🔍 Audit — Verify Ownership (Sphere)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "audit",
+                "--suspect", "${workspaceFolder}/test_sphere_watermarked.obj",
+                "--keyfile", "${workspaceFolder}/test_sphere.dna.npz",
+                "--password", "s3cret"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "🔍 Audit — Verify Ownership (Torus)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "audit",
+                "--suspect", "${workspaceFolder}/test_torus_watermarked.obj",
+                "--keyfile", "${workspaceFolder}/test_torus.dna.npz",
+                "--password", "p@ssw0rd"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "🔍 Audit — Cross-check (Should NOT match)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "audit",
+                "--suspect", "${workspaceFolder}/test_torus_watermarked.obj",
+                "--keyfile", "${workspaceFolder}/test_sphere.dna.npz",
+                "--password", "s3cret"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "📄 Info — Inspect Keyfile (Sphere)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "info",
+                "--keyfile", "${workspaceFolder}/test_sphere.dna.npz",
+                "--password", "s3cret"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "🧪 Generate Test Meshes",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/generate_test_mesh.py",
+            "args": [
+                "--shape", "sphere",
+                "--output", "${workspaceFolder}/test_sphere.obj"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}

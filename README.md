@@ -90,7 +90,7 @@ Download the pre-built `.exe` from [Releases](https://github.com/archtecgr/Foren
 
 ---
 
-## 🔬 Technical Details
+## Technical Details
 
 ### Watermarking Algorithm
 

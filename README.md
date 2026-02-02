@@ -31,7 +31,7 @@ Unlike traditional metadata-based protection (which is trivially removed), this 
 ### Prerequisites
 
 - **Python 3.13+** ([Download](https://www.python.org/downloads/))
-- **Windows/Linux/macOS** (tested on Windows 10/11, Ubuntu 22.04)
+- **Windows** (tested on Windows 10)
 
 ### Installation
 

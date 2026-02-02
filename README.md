@@ -53,7 +53,7 @@ Unlike traditional metadata-based protection (which is trivially removed), this 
 
 ### Standalone Executable (Windows)
 
-Download the pre-built `.exe` from [Releases](https://github.com/archtecgr/Forensic_3D_Watermarking_Suite/releases) — no Python installation required.
+Download the pre-built `.exe` from [Releases](https://github.com/archtecgr/Forensic-3D-Watermarking-with-Spectral-Analysis/releases) — no Python installation required.
 
 ---
 
